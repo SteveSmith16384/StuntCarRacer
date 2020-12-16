@@ -38,7 +38,7 @@ engine_force = 40.0
 script = ExtResource( 2 )
 
 [node name="VehicleWheel" type="VehicleWheel" parent="."]
-transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.03883, 0.476362, 2.30475 )
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.039, 0.8, 2.305 )
 engine_force = 40.0
 use_as_traction = true
 use_as_steering = true
@@ -52,7 +52,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 5 )
 
 [node name="VehicleWheel2" type="VehicleWheel" parent="."]
-transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.53672, 0.476362, 2.2558 )
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.537, 0.8, 2.256 )
 use_as_traction = true
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
@@ -64,7 +64,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 8 )
 
 [node name="VehicleWheel3" type="VehicleWheel" parent="."]
-transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.0569, 0.476362, -2.48074 )
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.057, 0.8, -2.481 )
 engine_force = 40.0
 use_as_traction = true
 use_as_steering = true
@@ -77,7 +77,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 9 )
 
 [node name="VehicleWheel4" type="VehicleWheel" parent="."]
-transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.28674, 0.476362, -2.4166 )
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.287, 0.8, -2.417 )
 use_as_traction = true
 wheel_friction_slip = 1.0
 suspension_stiffness = 40.0
@@ -88,6 +88,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 10 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.336529, 0 )
 mesh = ExtResource( 1 )
 skin = SubResource( 3 )
 skeleton = NodePath("")
@@ -96,5 +97,5 @@ material/1 = SubResource( 7 )
 material/2 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 4.4908, 0, 0.0224537, 0, 1.2096, 0, 0.0610439, 0, 1.91177, 0.892586, 1.2839, -0.156334 )
+transform = Transform( 4.4908, 0, 0.0224537, 0, 1.2096, 0, 0.0610439, 0, 1.91177, 0.892586, 1.60105, -0.156334 )
 shape = SubResource( 4 )

@@ -13,7 +13,7 @@ func _physics_process(delta):
 	steer_target = Input.get_action_strength("turn_left") - Input.get_action_strength("turn_right")
 	steer_target *= STEER_LIMIT
 	
-	if true or Input.is_action_pressed("accelerate"):
+	if Input.is_action_pressed("accelerate"):
 		engine_force = engine_force_value
 	else:
 		engine_force = 0
