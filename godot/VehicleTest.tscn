@@ -1,26 +1,43 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/jkm_fordfocus/fordfocus128.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://VehicleBody.gd" type="Script" id=2]
+[ext_resource path="res://assets/jkm_fordfocus/fordfocusnew128.bmp" type="Texture" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
 [sub_resource type="CylinderMesh" id=2]
 
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0, 0, 0, 1 )
+
 [sub_resource type="Skin" id=3]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 3 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 1, 0.951168, 1 )
 
-[node name="VehicleTest" type="Spatial"]
-
-[node name="VehicleBody" type="VehicleBody" parent="."]
+[node name="VehicleBody" type="VehicleBody"]
 transform = Transform( 0.0854343, 0, 0.996344, 0, 1, 0, -0.996344, 0, 0.0854343, 0, 0, 0 )
 physics_material_override = SubResource( 1 )
 engine_force = 40.0
 script = ExtResource( 2 )
 
-[node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
+[node name="VehicleWheel" type="VehicleWheel" parent="."]
 transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.03883, 0.476362, 2.30475 )
 engine_force = 40.0
 use_as_traction = true
@@ -29,24 +46,24 @@ wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel"]
+[node name="MeshInstance" type="MeshInstance" parent="VehicleWheel"]
 transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 5 )
 
-[node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
+[node name="VehicleWheel2" type="VehicleWheel" parent="."]
 transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.53672, 0.476362, 2.2558 )
 use_as_traction = true
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel2"]
+[node name="MeshInstance" type="MeshInstance" parent="VehicleWheel2"]
 transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 8 )
 
-[node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
+[node name="VehicleWheel3" type="VehicleWheel" parent="."]
 transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.0569, 0.476362, -2.48074 )
 engine_force = 40.0
 use_as_traction = true
@@ -54,29 +71,30 @@ use_as_steering = true
 wheel_friction_slip = 1.0
 suspension_stiffness = 40.0
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel3"]
+[node name="MeshInstance" type="MeshInstance" parent="VehicleWheel3"]
 transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 9 )
 
-[node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
+[node name="VehicleWheel4" type="VehicleWheel" parent="."]
 transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.28674, 0.476362, -2.4166 )
 use_as_traction = true
 wheel_friction_slip = 1.0
 suspension_stiffness = 40.0
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel4"]
+[node name="MeshInstance" type="MeshInstance" parent="VehicleWheel4"]
 transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 10 )
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody"]
+[node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )
 skin = SubResource( 3 )
-material/0 = null
-material/1 = null
+skeleton = NodePath("")
+material/0 = SubResource( 6 )
+material/1 = SubResource( 7 )
 material/2 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="VehicleBody"]
+[node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 4.4908, 0, 0.0224537, 0, 1.2096, 0, 0.0610439, 0, 1.91177, 0.892586, 1.2839, -0.156334 )
 shape = SubResource( 4 )

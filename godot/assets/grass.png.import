@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/fordfocusnew128.bmp-721c3426dfe2b8762edf69d1ebc04b20.s3tc.stex"
-path.etc="res://.import/fordfocusnew128.bmp-721c3426dfe2b8762edf69d1ebc04b20.etc.stex"
+path.s3tc="res://.import/grass.png-a207bda4a53e32c7645a41ec6d1c234e.s3tc.stex"
+path.etc="res://.import/grass.png-a207bda4a53e32c7645a41ec6d1c234e.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/jkm_fordfocus/fordfocusnew128.bmp"
-dest_files=[ "res://.import/fordfocusnew128.bmp-721c3426dfe2b8762edf69d1ebc04b20.s3tc.stex", "res://.import/fordfocusnew128.bmp-721c3426dfe2b8762edf69d1ebc04b20.etc.stex" ]
+source_file="res://assets/grass.png"
+dest_files=[ "res://.import/grass.png-a207bda4a53e32c7645a41ec6d1c234e.s3tc.stex", "res://.import/grass.png-a207bda4a53e32c7645a41ec6d1c234e.etc.stex" ]
 
 [params]
 

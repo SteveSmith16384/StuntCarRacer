@@ -16,5 +16,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	print($VehicleTest.translation)
 	$Camera.look_at($VehicleTest.translation, UP)
+	#$Camera.update()
 	pass
