@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/jkm_fordfocus/fordfocus128.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://VehicleBody.gd" type="Script" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="Skin" id=2]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 0.951168, 1 )
+
+[node name="VehicleTest" type="Spatial"]
+
+[node name="VehicleBody" type="VehicleBody" parent="."]
+transform = Transform( 0.0854343, 0, 0.996344, 0, 1, 0, -0.996344, 0, 0.0854343, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.03883, 0.476362, 2.30475 )
+
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel"]
+transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.53672, 0.476362, 2.2558 )
+
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel2"]
+transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, -2.0569, 0.476362, -2.48074 )
+
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel3"]
+transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
+transform = Transform( 0.0473329, 0, -0.998879, 0, 1, 0, 0.998879, 0, 0.0473329, 4.28674, 0.476362, -2.4166 )
+
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel4"]
+transform = Transform( -0.00108489, 0.293102, 0.0327058, -0.810005, -0.00645143, 0.0309474, 0.0327057, -0.0111984, 0.853693, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody"]
+mesh = ExtResource( 1 )
+skin = SubResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="VehicleBody"]
+transform = Transform( 5.2027, 0, 0, 0, 1.2096, 0, 0, 0, 1.9137, 0.892586, 1.00728, -0.156334 )
+shape = SubResource( 3 )
