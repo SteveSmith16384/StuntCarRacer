@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://VehicleTest.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://Course.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 3 )
 
 [node name="VehicleTest" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.28304, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8751, 19.5406, 4.5808 )
 
 [node name="Floor" parent="." instance=ExtResource( 2 )]
 
+[node name="Course" parent="." instance=ExtResource( 4 )]
+transform = Transform( 5.16158, 0, 0, 0, 7.45361, 0, 0, 0, 9.88606, 0, 0, 0 )
+
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13439, 5.29799, 14.2023 )
+transform = Transform( -0.0703137, 0, -0.997525, 0, 1, 0, 0.997525, 0, -0.0703137, -0.13439, 5.29799, 7.93693 )
 fov = 75.9375
