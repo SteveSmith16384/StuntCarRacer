@@ -14,6 +14,19 @@ func _ready():
 	pass # Replace with function body.
 
 
+func _process(delta):
+	# Key Directly
+#	if Input.is_key_pressed(KEY_ESC):
+#	  $VehicleTest.position = $Course.get_node("StartPosition").position
+	pass
+	
+
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_ESCAPE:
+			$VehicleTest.translation = $Course.get_node("StartPosition").global_transform.origin
+	pass
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	#print($VehicleTest.transf)

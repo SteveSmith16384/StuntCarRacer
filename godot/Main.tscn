@@ -9,13 +9,20 @@
 script = ExtResource( 3 )
 
 [node name="VehicleTest" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8751, 19.5406, 4.5808 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.2078, 18.8282, 127 )
 
 [node name="Floor" parent="." instance=ExtResource( 2 )]
 
 [node name="Course" parent="." instance=ExtResource( 4 )]
-transform = Transform( 5.16158, 0, 0, 0, 7.45361, 0, 0, 0, 9.88606, 0, 0, 0 )
+transform = Transform( 17, 0, 0, 0, 7.454, 0, 0, 0, 17.302, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.0703137, 0, -0.997525, 0, 1, 0, 0.997525, 0, -0.0703137, -0.13439, 5.29799, 7.93693 )
 fov = 75.9375
+far = 200.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.887387, 0.461019, -0.0023837, -0.0517392, -0.0944491, 0.994184, 0.458113, 0.88235, 0.107666, 0, 85.1468, -28.1895 )
+light_color = Color( 0.968627, 0.941176, 0.541176, 1 )
+shadow_enabled = true
+directional_shadow_mode = 0
