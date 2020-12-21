@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Spatial",
+"class": "Main",
+"language": "GDScript",
+"path": "res://Main.gd"
+}, {
 "base": "VehicleBody",
 "class": "vehicle",
 "language": "GDScript",
 "path": "res://VehicleBody.gd"
 } ]
 _global_script_class_icons={
+"Main": "",
 "vehicle": ""
 }
 

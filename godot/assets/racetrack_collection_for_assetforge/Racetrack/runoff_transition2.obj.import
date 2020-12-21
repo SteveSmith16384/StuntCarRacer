@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/runoff_transition2.obj-79992400213090fbf89ffba1d17ffa44.mesh"
+
+[deps]
+
+files=[ "res://.import/runoff_transition2.obj-79992400213090fbf89ffba1d17ffa44.mesh" ]
+
+source_file="res://assets/racetrack_collection_for_assetforge/Racetrack/runoff_transition2.obj"
+dest_files=[ "res://.import/runoff_transition2.obj-79992400213090fbf89ffba1d17ffa44.mesh", "res://.import/runoff_transition2.obj-79992400213090fbf89ffba1d17ffa44.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

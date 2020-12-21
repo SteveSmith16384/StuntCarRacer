@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/angle_transition.obj-f5bd24a669c64a9d98a13ef7cf47eed4.mesh"
+
+[deps]
+
+files=[ "res://.import/angle_transition.obj-f5bd24a669c64a9d98a13ef7cf47eed4.mesh" ]
+
+source_file="res://assets/racetrack_collection_for_assetforge/Racetrack/angle_transition.obj"
+dest_files=[ "res://.import/angle_transition.obj-f5bd24a669c64a9d98a13ef7cf47eed4.mesh", "res://.import/angle_transition.obj-f5bd24a669c64a9d98a13ef7cf47eed4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

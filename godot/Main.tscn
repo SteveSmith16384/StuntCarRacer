@@ -3,18 +3,15 @@
 [ext_resource path="res://VehicleTest.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
-[ext_resource path="res://Course.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Course3.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 3 )
 
-[node name="VehicleTest" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.2078, 18.8282, 127 )
+[node name="VehicleBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0667441, 0, 0.99777, 0, 1, 0, -0.99777, 0, 0.0667441, -115.612, 36.6823, 54.7654 )
 
 [node name="Floor" parent="." instance=ExtResource( 2 )]
-
-[node name="Course" parent="." instance=ExtResource( 4 )]
-transform = Transform( 17, 0, 0, 0, 7.454, 0, 0, 0, 17.302, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.0703137, 0, -0.997525, 0, 1, 0, 0.997525, 0, -0.0703137, -0.13439, 5.29799, 7.93693 )
@@ -26,3 +23,6 @@ transform = Transform( -0.887387, 0.461019, -0.0023837, -0.0517392, -0.0944491, 
 light_color = Color( 0.968627, 0.941176, 0.541176, 1 )
 shadow_enabled = true
 directional_shadow_mode = 0
+
+[node name="Course" parent="." instance=ExtResource( 4 )]
+transform = Transform( 60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 1.44456, 0 )
