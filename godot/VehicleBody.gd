@@ -2,11 +2,32 @@ class_name vehicle extends VehicleBody
 
 const STEER_SPEED = 1
 const STEER_LIMIT = 0.5
+const FRICTION = 3.5
+const TRAVEL = .7
+const STIFFNESS = 50
 
 var steer_target = 0
 
-export var engine_force_value = 400#40
+export var engine_force_value = 200#40
 
+func _ready():
+	$VehicleWheel.wheel_friction_slip = FRICTION
+	$VehicleWheel2.wheel_friction_slip = FRICTION
+	$VehicleWheel3.wheel_friction_slip = FRICTION
+	$VehicleWheel4.wheel_friction_slip = FRICTION
+	
+	$VehicleWheel.suspension_travel = TRAVEL
+	$VehicleWheel2.suspension_travel = TRAVEL
+	$VehicleWheel3.suspension_travel = TRAVEL
+	$VehicleWheel4.suspension_travel = TRAVEL
+
+	$VehicleWheel.suspension_stiffness = STIFFNESS
+	$VehicleWheel2.suspension_stiffness = STIFFNESS
+	$VehicleWheel3.suspension_stiffness = STIFFNESS
+	$VehicleWheel4.suspension_stiffness = STIFFNESS
+	pass
+	
+		
 func _physics_process(delta):
 	var fwd_mps = transform.basis.xform_inv(linear_velocity).x
 	

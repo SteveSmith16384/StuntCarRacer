@@ -28,7 +28,7 @@ func _unhandled_input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	$Camera.translation = $VehicleBody.translation
-	$Camera.translation.y += 4
+	$Camera.translation.y += 6
 	#$Camera.translation.x -= 14
 	
 	$Camera.rotation = $VehicleBody.rotation
