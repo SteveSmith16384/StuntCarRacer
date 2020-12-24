@@ -3,8 +3,9 @@ class_name vehicle extends VehicleBody
 const STEER_SPEED = 1
 const STEER_LIMIT = 0.5
 const FRICTION = 4.5
-const TRAVEL = .7
+const TRAVEL = .1
 const STIFFNESS = 50
+const ROLL_INFLUENCE = 0
 
 var steer_target = 0
 
@@ -25,6 +26,11 @@ func _ready():
 	$VehicleWheel2.suspension_stiffness = STIFFNESS
 	$VehicleWheel3.suspension_stiffness = STIFFNESS
 	$VehicleWheel4.suspension_stiffness = STIFFNESS
+
+	$VehicleWheel.wheel_roll_influence = ROLL_INFLUENCE
+	$VehicleWheel2.wheel_roll_influence = ROLL_INFLUENCE
+	$VehicleWheel3.wheel_roll_influence = ROLL_INFLUENCE
+	$VehicleWheel4.wheel_roll_influence = ROLL_INFLUENCE
 	pass
 	
 		
