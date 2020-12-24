@@ -2,13 +2,13 @@ class_name vehicle extends VehicleBody
 
 const STEER_SPEED = 1
 const STEER_LIMIT = 0.5
-const FRICTION = 3.5
+const FRICTION = 4.5
 const TRAVEL = .7
 const STIFFNESS = 50
 
 var steer_target = 0
 
-export var engine_force_value = 200#40
+export var engine_force_value = 40
 
 func _ready():
 	$VehicleWheel.wheel_friction_slip = FRICTION

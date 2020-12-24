@@ -9,6 +9,8 @@ func _ready():
 	UP.x = 0
 	UP.y = 1
 	UP.z = 0
+
+	$VehicleBody.translation = $Course.get_node("StartPosition").global_transform.origin
 	pass # Replace with function body.
 
 

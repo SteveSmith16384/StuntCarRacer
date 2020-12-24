@@ -25,4 +25,4 @@ shadow_enabled = true
 directional_shadow_mode = 0
 
 [node name="Course" parent="." instance=ExtResource( 4 )]
-transform = Transform( 40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 1.44456, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.44456, 0 )
